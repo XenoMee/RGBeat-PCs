@@ -57,15 +57,21 @@ body {
   min-height: 100svh;
 
   display: grid;
-  place-content: center;
+  align-items: center;
 }
 
 /* Typography */
-/* .restaurant-name {
+.restaurant-name {
   font-size: 1.5rem;
-} */
+  font-weight: 600;
+}
 
 /* Layout */
+.menu {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
 .menu__header {
   color: #fff;
   background-color: #000;
