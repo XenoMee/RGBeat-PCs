@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  /* Colors */
+  --clr-background: #dfdcdc;
+  --clr-text: #000;
+  --clr-separator: #bbbbbb;
+
+  --clr-accent: #16db99;
+  /* Font family */
+  --ff-base: 'Poppins', sans-serif;
+
+  /* Font weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Font size */
+  --fs-default: 0.875rem;
+  --fs-xs: 0.765rem;
+  --fs-h1: 1.3rem;
+  --fs-h2: 1.1rem;
+  --fs-h3: 1rem;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -52,10 +75,12 @@ h6 {
 General
 */
 body {
-  background-color: #dfdcdc;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  font-family: var(--ff-base);
   line-height: 1.5;
+  font-size: var(--fs-default);
+  font-weight: var(--fw-regular);
   min-height: 100svh;
 
   display: grid;
@@ -64,20 +89,35 @@ body {
 
 /* Typography */
 .restaurant-name {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-semibold);
 }
 
-.item-title {
-  font-size: 1.3rem;
+.item-price {
+  font-weight: var(--fw-medium);
+}
+
+:is(.item-title, .check-amount) {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+}
+
+.item-description {
+  font-size: var(--fs-xs);
+  color: var(--clr-separator);
+  margin-bottom: 0.5rem;
+}
+
+:is(.check-title, .modal-title) {
+  text-align: center;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-medium);
 }
 
 /* Layout */
 .menu {
   max-width: 600px;
   margin-inline: auto;
-  border-radius: 1rem;
-  overflow: hidden;
 }
 
 .menu__header {
@@ -97,9 +137,56 @@ body {
 
 .menu-item {
   padding-block: 2rem;
+  border-bottom: 1px solid var(--clr-separator);
 }
 
-.item-description {
-  color: #bbbbbb;
-  margin-bottom: 0.5rem;
+.add-btn {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--clr-text);
+  flex-shrink: 0;
+  margin-left: 0.4rem;
+  font-size: var(--fs-xs);
+}
+
+.check-list {
+  border-bottom: 2px solid var(--clr-separator);
+}
+
+.remove-btn {
+  font-size: var(--fs-xs);
+}
+
+.check-amount {
+  padding-block: 0.5rem;
+}
+
+.complete-btn,
+.pay-btn {
+  background-color: var(--clr-accent) !important;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: var(--fs-default);
+}
+
+.card-details-modal {
+  position: fixed;
+  height: fit-content;
+  max-width: 524px;
+  background-color: #fff;
+  inset: 0;
+  box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  scale: 0;
+  transition: scale 250ms ease-in-out;
+  transform-origin: center;
+}
+
+.card-inputs input {
+  width: 100%;
+  border: 2px solid var(--clr-separator);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.7rem;
 }
