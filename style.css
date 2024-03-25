@@ -59,3 +59,16 @@ body {
   display: grid;
   place-content: center;
 }
+
+/* Typography */
+/* .restaurant-name {
+  font-size: 1.5rem;
+} */
+
+/* Layout */
+.menu__header {
+  color: #fff;
+  background-color: #000;
+  background: url('./public/images/hamburger.png') no-repeat;
+  background-size: cover;
+}
