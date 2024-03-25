@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Mobile Restaurant Menu</title>
@@ -13,23 +17,119 @@
 <body>
     <main>
         <section class="menu">
-            <header class="menu__header px-12 pt-8 pb-20">
+            <header class="menu__header px-6 pt-8 pb-20">
                 <div class="restaurant-details">
                     <h1 class="restaurant-name">Jimmy's Dinner</h1>
                     <p>The best burgers and pizzas in town.</p>
                 </div>
             </header>
 
-            <div class="menu__list">
+            <div class="menu-content px-8 pb-8">
 
-            </div>
+                <ul class="menu__list">
 
-            <div class="menu__check">
+                    <li class="menu-item">
+                        <div class="flex items-center justify-between">
+                            <div class="flex  items-center gap-4">
+                                <img class="item-image" src="" alt="">
+                                <div class="item-details">
+                                    <h3 class="item-title">Pizza</h3>
+                                    <p class="item-description">pepperoni, mushroom, mozarella</p>
+                                    <p class="item-price">$<span class="price-value">12</span></p>
+                                </div>
+                            </div>
+                            <button class="add-btn ">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </li>
 
-            </div>
+                    <li class="menu-item">
+                        <div class="flex items-center justify-between">
+                            <div class="flex  items-center gap-4">
+                                <img class="item-image" src="" alt="">
+                                <div class="item-details">
+                                    <h3 class="item-title"></h3>
+                                    <p class="item-description"></p>
+                                    <p class="item-price">$<span class="price-value">12</span></p>
+                                </div>
+                            </div>
+                            <button class="add-btn ">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </li>
 
-            <div class="card-details">
+                    <li class="menu-item">
+                        <div class="flex items-center justify-between">
+                            <div class="flex  items-center gap-4">
+                                <img class="item-image" src="" alt="">
+                                <div class="item-details">
+                                    <h3 class="item-title"></h3>
+                                    <p class="item-description"></p>
+                                    <p class="item-price">$<span class="price-value">12</span></p>
+                                </div>
+                            </div>
+                            <button class="add-btn ">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </li>
 
+                </ul>
+
+                <div class="menu__check grid gap-6 mt-6">
+                    <h2 class="check-title">Your Order</h2>
+                    <div class="check-content">
+                        <ul class="check-list grid gap-1">
+
+                            <li class="check-item flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="item-title">Pizza</h3>
+                                    <button class="remove-btn text-red-500">remove</button>
+                                </div>
+                                <p class="item-price">$<span class="price-value">12</span></p>
+                            </li>
+                            <li class="check-item flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="item-title">Pizza</h3>
+                                    <button class="remove-btn text-red-500">remove</button>
+                                </div>
+                                <p class="item-price">$<span class="price-value">12</span></p>
+                            </li>
+                            <li class="check-item flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="item-title">Pizza</h3>
+                                    <button class="remove-btn text-red-500">remove</button>
+                                </div>
+                                <p class="item-price">$<span class="price-value">12</span></p>
+                            </li>
+
+                        </ul>
+
+                        <h3 class="check-amount flex items-center justify-between">Total price: <span
+                                class="block price-value">$12</span></h3>
+                    </div>
+
+                    <button class="complete-btn">Complete order</button>
+
+                </div>
+
+                <div class="card-details-modal px-4 py-6">
+                    <form class="grid gap-6">
+                        <h2 class="modal-title ">Enter card details</h2>
+                        <div class="card-inputs grid gap-4">
+                            <input type="text" name="card-name" id="card-name" placeholder="Enter cardholder's name">
+                            <input type="tel" name="card-number" id="card-number" placeholder="Enter card number">
+                            <div class="flex items-center justify-between">
+                                <input class="max-w-36" type="date" name="" id="">
+                                <input class="max-w-24" type="tel" name="card-cvv" id="card-cvv"
+                                    placeholder="Enter CVV">
+                            </div>
+                        </div>
+                        <button class="pay-btn" type="submit">Pay</button>
+                    </form>
+                </div>
             </div>
 
         </section>
