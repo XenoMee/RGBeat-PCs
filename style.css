@@ -128,27 +128,27 @@ body {
   max-width: 10rem;
 }
 
-.menu {
+.shop {
   max-width: 600px;
   margin-inline: auto;
 }
 
-.menu__header {
+.shop__header {
   color: #fff;
   background-color: #000;
   background: url('./public/images/header-background-img.png') no-repeat center;
   background-size: cover;
 }
 
-.menu-content {
+.shop-content {
   background-color: #fff;
 }
 
-.menu-list {
+.shop-list {
   list-style: none;
 }
 
-.menu-item {
+.shop-item {
   padding-block: 2rem;
   border-bottom: 1px solid var(--clr-separator);
 }
