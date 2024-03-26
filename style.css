@@ -177,8 +177,10 @@ body {
 
 .complete-btn,
 .pay-btn {
-  background-color: var(--clr-accent) !important;
   color: #fff;
+  box-shadow: 0px 0px 20px blueviolet;
+  animation: 3s linear 0s infinite normal none running border-RGB-animation;
+  border: 1px solid blueviolet;
   border-radius: 0.3rem;
   padding: 0.5rem;
   font-size: var(--fs-default);
@@ -188,13 +190,15 @@ body {
   position: fixed;
   height: fit-content;
   max-width: 524px;
-  background-color: #fff;
   inset: 0;
+  background-color: #fff;
+
   box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
-  margin: auto;
-  scale: 0;
-  transition: scale 250ms ease-in-out;
+  border-radius: 1rem;
+  /* scale: 0; */
   transform-origin: center;
+  transition: scale 250ms ease-in-out;
+  margin: auto;
 }
 
 .card-inputs input {
@@ -202,4 +206,11 @@ body {
   border: 2px solid var(--clr-separator);
   border-radius: 0.5rem;
   padding: 0.5rem 0.7rem;
+}
+
+/* Animations */
+@keyframes border-RGB-animation {
+  50% {
+    filter: hue-rotate(360deg);
+  }
 }
