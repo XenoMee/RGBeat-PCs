@@ -92,7 +92,6 @@ body {
 }
 
 /* Typography */
-
 .item-price {
   font-weight: var(--fw-medium);
 }
@@ -231,10 +230,17 @@ body {
 .credit-card input,
 .credit-card select {
   color: rgb(30 41 59);
+  font-weight: var(--fw-medium);
   padding: 0.25em 0.3em;
   border: none;
   border-radius: 0.25em;
   appearance: none;
+}
+.credit-card input:focus,
+.credit-card select:focus {
+  box-shadow: 0px 0px 20px blueviolet;
+  animation: 3s linear 0s infinite normal none running border-RGB-animation;
+  border: 1px solid blueviolet;
 }
 
 .credit-card label {
