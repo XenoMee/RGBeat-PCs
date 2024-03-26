@@ -88,10 +88,6 @@ body {
 }
 
 /* Typography */
-.restaurant-name {
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-semibold);
-}
 
 .item-price {
   font-weight: var(--fw-medium);
@@ -115,9 +111,29 @@ body {
 }
 
 /* Layout */
+.restaurant-details * {
+  margin-inline: auto;
+}
+
+.restaurant-details p {
+  width: 15ch;
+  text-align: center;
+}
+
+.restaurant-details {
+  max-width: 10rem;
+}
+
 .menu {
   max-width: 600px;
   margin-inline: auto;
+}
+
+.menu__header {
+  color: #fff;
+  background-color: #000;
+  background: url('./public/images/header-background-img.png') no-repeat center;
+  background-size: cover;
 }
 
 .menu-content {
