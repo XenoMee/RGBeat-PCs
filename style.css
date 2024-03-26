@@ -175,8 +175,7 @@ body {
   padding-block: 0.5rem;
 }
 
-.complete-btn,
-.pay-btn {
+.btn {
   justify-self: center;
   padding: 0.5rem 2.5rem;
   color: #fff;
@@ -189,8 +188,7 @@ body {
   font-size: var(--fs-default);
 }
 
-.complete-btn:is(:hover, :focus),
-.pay-btn:is(:hover, :focus) {
+.btn:is(:hover, :focus) {
   scale: 1.05;
 }
 
@@ -200,7 +198,6 @@ body {
   max-width: 524px;
   inset: 0;
   background-color: #fff;
-
   box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   /* scale: 0; */
@@ -214,12 +211,44 @@ body {
   flex-grow: 0;
 }
 
-.card-inputs input {
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.credit-card .horizontal-input-stack {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cc-inputs input,
+.cvv-input {
+  text-align: center;
+  width: 5ch;
+}
+
+.credit-card input,
+.credit-card select {
   color: rgb(30 41 59);
-  width: 100%;
-  border: 2px solid var(--clr-separator);
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.7rem;
+  padding: 0.25em 0.3em;
+  border: none;
+  border-radius: 0.25em;
+  appearance: none;
+}
+
+.credit-card label {
+  font-size: var(--ff-base);
+  text-transform: uppercase;
+}
+
+.credit-card .input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cvv-group label {
+  text-align: center;
 }
 
 /* Animations */
