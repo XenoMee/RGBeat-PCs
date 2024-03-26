@@ -7,6 +7,10 @@
   --clr-separator: #bbbbbb;
 
   --clr-accent: #16db99;
+
+  /* Gradient */
+  --gradient-primary: linear-gradient(to right, #dd1818, #56ab2f, #0082c8);
+
   /* Font family */
   --ff-base: 'Poppins', sans-serif;
 
