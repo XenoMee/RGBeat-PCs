@@ -209,10 +209,10 @@ body {
   margin: auto;
 }
 
-/* .form-header .visa-logo {
+.form-header .visa-logo {
   width: 70px;
   flex-grow: 0;
-} */
+}
 
 .card-inputs input {
   color: rgb(30 41 59);
