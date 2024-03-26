@@ -8,9 +8,6 @@
 
   --clr-accent: #16db99;
 
-  /* Gradient */
-  --gradient-primary: linear-gradient(to right, #dd1818, #56ab2f, #0082c8);
-
   /* Font family */
   --ff-base: 'Poppins', sans-serif;
 
@@ -80,6 +77,10 @@ General
 */
 body {
   background-color: var(--clr-background);
+  background-image: url('./public/images/bg-pattern.png');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--clr-text);
   font-family: var(--ff-base);
   line-height: 1.5;
@@ -152,6 +153,10 @@ body {
   border-bottom: 1px solid var(--clr-separator);
 }
 
+.item-image {
+  border-radius: 1rem;
+}
+
 .add-btn {
   display: inline-block;
   border-radius: 50%;
@@ -174,7 +179,8 @@ body {
   padding-block: 0.5rem;
 }
 
-.btn {
+.btn,
+.add-btn {
   justify-self: center;
   padding: 0.5rem 2.5rem;
   color: #fff;
@@ -185,6 +191,11 @@ body {
   scale: 1;
   transition: scale 250ms linear;
   font-size: var(--fs-default);
+}
+
+.add-btn {
+  padding: 0.25em 0.5em;
+  border-radius: 50%;
 }
 
 .btn:is(:hover, :focus) {
@@ -199,7 +210,7 @@ body {
   background-color: #fff;
   box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  /* scale: 0; */
+  scale: 0;
   transform-origin: center;
   transition: scale 250ms ease-in-out;
   margin: auto;
