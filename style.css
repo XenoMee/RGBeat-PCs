@@ -77,10 +77,6 @@ General
 */
 body {
   background-color: var(--clr-background);
-  background-image: url('./public/images/bg-pattern.png');
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: var(--clr-text);
   font-family: var(--ff-base);
   line-height: 1.5;
@@ -126,6 +122,7 @@ body {
 
 .restaurant-details {
   max-width: 10rem;
+  margin-inline-start: auto;
 }
 
 .shop {
@@ -155,16 +152,7 @@ body {
 
 .item-image {
   border-radius: 1rem;
-}
-
-.add-btn {
-  display: inline-block;
-  border-radius: 50%;
-  padding: 0.1rem 0.3rem;
-  border: 1px solid var(--clr-text);
-  flex-shrink: 0;
-  margin-left: 0.4rem;
-  font-size: var(--fs-xs);
+  aspect-ratio: 1 / 1;
 }
 
 .check-list {
@@ -184,7 +172,7 @@ body {
   justify-self: center;
   padding: 0.5rem 2.5rem;
   color: #fff;
-  box-shadow: 0px 0px 20px blueviolet;
+  box-shadow: 0px 0px 10px blueviolet;
   animation: 3s linear 0s infinite normal none running border-RGB-animation;
   border: 1px solid blueviolet;
   border-radius: 0.3rem;
@@ -194,12 +182,18 @@ body {
 }
 
 .add-btn {
+  margin-block-start: auto;
   padding: 0.25em 0.5em;
   border-radius: 50%;
 }
 
+.add-btn:is(:hover, :focus) {
+  color: #16db99;
+}
+
 .btn:is(:hover, :focus) {
   scale: 1.05;
+  box-shadow: 0px 0px 25px blueviolet;
 }
 
 .card-details-modal {
@@ -272,5 +266,18 @@ body {
 @keyframes border-RGB-animation {
   50% {
     filter: hue-rotate(360deg);
+  }
+}
+
+@media (min-width: 460px) {
+}
+
+@media (min-width: 600px) {
+  .restaurant-details {
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+  }
+  .shop-item-content {
+    grid-auto-flow: column;
   }
 }
