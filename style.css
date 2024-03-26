@@ -177,13 +177,21 @@ body {
 
 .complete-btn,
 .pay-btn {
+  justify-self: center;
+  padding: 0.5rem 2.5rem;
   color: #fff;
   box-shadow: 0px 0px 20px blueviolet;
   animation: 3s linear 0s infinite normal none running border-RGB-animation;
   border: 1px solid blueviolet;
   border-radius: 0.3rem;
-  padding: 0.5rem;
+  scale: 1;
+  transition: scale 250ms linear;
   font-size: var(--fs-default);
+}
+
+.complete-btn:is(:hover, :focus),
+.pay-btn:is(:hover, :focus) {
+  scale: 1.05;
 }
 
 .card-details-modal {
@@ -201,7 +209,13 @@ body {
   margin: auto;
 }
 
+/* .form-header .visa-logo {
+  width: 70px;
+  flex-grow: 0;
+} */
+
 .card-inputs input {
+  color: rgb(30 41 59);
   width: 100%;
   border: 2px solid var(--clr-separator);
   border-radius: 0.5rem;
