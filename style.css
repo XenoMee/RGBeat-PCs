@@ -269,9 +269,6 @@ body {
   }
 }
 
-@media (min-width: 460px) {
-}
-
 @media (min-width: 600px) {
   .restaurant-details {
     margin-inline-start: 0;

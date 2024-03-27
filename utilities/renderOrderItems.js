@@ -1,7 +1,16 @@
 const renderOrderItems = (arr) => {
-  if (arr.length <= 0) return;
+  const checkListEl = document.querySelector('.check-list');
+  const shopCheckEl = document.querySelector('.shop__check');
 
-  const orderItems = arr
+  if (arr.length > 0) {
+    shopCheckEl.classList.remove('hidden');
+    shopCheckEl.classList.add('grid');
+  } else {
+    shopCheckEl.classList.add('hidden');
+    shopCheckEl.classList.remove('grid');
+  }
+
+  checkListEl.innerHTML = arr
     .map((orderItem) => {
       return `
             <li class="check-item flex items-center justify-between">
@@ -17,8 +26,6 @@ const renderOrderItems = (arr) => {
       `;
     })
     .join('');
-
-  document.querySelector('.check-list').innerHTML = orderItems;
 };
 
 export default renderOrderItems;
