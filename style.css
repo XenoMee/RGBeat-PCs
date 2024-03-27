@@ -172,7 +172,7 @@ body {
   justify-self: center;
   padding: 0.5rem 2.5rem;
   color: #fff;
-  box-shadow: 0px 0px 10px blueviolet;
+  box-shadow: 0px 0px 10px #8a2be2;
   animation: 3s linear 0s infinite normal none running border-RGB-animation;
   border: 1px solid blueviolet;
   border-radius: 0.3rem;
@@ -187,16 +187,14 @@ body {
   border-radius: 50%;
 }
 
+.btn:is(:hover, :focus),
 .add-btn:is(:hover, :focus) {
-  color: #16db99;
-}
-
-.btn:is(:hover, :focus) {
-  scale: 1.05;
+  scale: 1.1;
   box-shadow: 0px 0px 25px blueviolet;
 }
 
-.card-details-modal {
+.card-details-modal,
+.rating-card {
   position: fixed;
   height: fit-content;
   max-width: 524px;
@@ -204,7 +202,7 @@ body {
   background-color: #fff;
   box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  scale: 0;
+  scale: 1;
   transform-origin: center;
   transition: scale 250ms ease-in-out;
   margin: auto;
@@ -269,6 +267,27 @@ body {
   scale: 0;
   transform-origin: center;
   transition: scale 250ms ease-in-out;
+}
+
+.rating-card {
+  max-width: 524px;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+
+  display: grid;
+  gap: 1.5rem;
+}
+
+.rating-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-button {
+  text-align: center;
+  padding: 0.5em 1.1em;
+  border-radius: 50%;
 }
 
 /* Animations */
