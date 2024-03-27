@@ -1,7 +1,5 @@
-import itemsArray from './data.js';
-
-const renderShopItems = () => {
-  const shopList = itemsArray
+const renderShopItems = (arr) => {
+  const shopList = arr
     .map((item) => {
       return `
     <li class="shop-item flex items-center justify-between">
