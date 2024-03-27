@@ -262,6 +262,15 @@ body {
   text-align: center;
 }
 
+.order-success {
+  text-align: center;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  scale: 0;
+  transform-origin: center;
+  transition: scale 250ms ease-in-out;
+}
+
 /* Animations */
 @keyframes border-RGB-animation {
   50% {
