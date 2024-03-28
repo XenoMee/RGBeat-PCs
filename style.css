@@ -202,7 +202,7 @@ body {
   background-color: #fff;
   box-shadow: 0 0 1rem 10px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  scale: 1;
+  scale: 0;
   transform-origin: center;
   transition: scale 250ms ease-in-out;
   margin: auto;
@@ -271,7 +271,6 @@ body {
 
 .rating-card {
   max-width: 524px;
-  padding: 1.5rem 1rem;
   border-radius: 1rem;
   color: #fff;
 
@@ -284,10 +283,17 @@ body {
   justify-content: space-between;
 }
 
-.rating-button {
+.rating-item {
   text-align: center;
   padding: 0.5em 1.1em;
   border-radius: 50%;
+}
+
+.rating-item[data-selected='true'] {
+  scale: 1.1;
+  box-shadow: 0px 0px 25px blueviolet;
+  animation: 3s linear 0s infinite normal none running border-RGB-animation;
+  outline: 1px solid blueviolet;
 }
 
 /* Animations */
