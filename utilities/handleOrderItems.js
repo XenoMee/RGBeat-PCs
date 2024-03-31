@@ -4,7 +4,6 @@ const orderValueEl = document.querySelector('.order-value');
 
 export const handleAddItem = (itemId, arr) => {
   const shopItemObj = itemsArray.filter((item) => item.id === itemId)[0];
-  console.log(shopItemObj);
   arr.unshift(shopItemObj);
   totalPriceOrder(arr, orderValueEl);
 };
