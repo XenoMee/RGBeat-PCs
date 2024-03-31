@@ -13,7 +13,7 @@ const renderShopItems = (arr) => {
                         <h3 class="item-title">${item.name}</h3>
                         <p class="item-description">${item.tags.join(', ')}</p>
                     </div>
-                    <p class="item-price">$<span class="price-value">${
+                    <p class="item-price"><i class="fa-solid fa-dollar-sign"></i><span class="price-value">${
                       item.price
                     }</span></p>
                 </div>

@@ -21,7 +21,7 @@ const renderOrderItems = (arr) => {
                 </button>
               </div>
            
-              <p class="item-price">$<span class="price-value">${orderItem.price}</span></p>
+              <p class="item-price"><i class="fa-solid fa-dollar-sign"></i><span class="price-value">${orderItem.price}</span></p>
             </li>
       `;
     })
